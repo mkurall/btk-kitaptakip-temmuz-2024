@@ -28,18 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnKategoriler = new Button();
             SuspendLayout();
+            // 
+            // btnKategoriler
+            // 
+            btnKategoriler.Location = new Point(33, 39);
+            btnKategoriler.Name = "btnKategoriler";
+            btnKategoriler.Size = new Size(197, 63);
+            btnKategoriler.TabIndex = 0;
+            btnKategoriler.Text = "Kategoriler";
+            btnKategoriler.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(456, 401);
+            ClientSize = new Size(890, 471);
+            Controls.Add(btnKategoriler);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnKategoriler;
     }
 }
