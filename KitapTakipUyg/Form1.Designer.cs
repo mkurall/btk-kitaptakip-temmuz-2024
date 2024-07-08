@@ -30,6 +30,7 @@
         {
             btnKategoriler = new Button();
             btnKaydet = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnKategoriler
@@ -52,12 +53,23 @@
             btnKaydet.UseVisualStyleBackColor = true;
             btnKaydet.Click += btnKaydet_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(33, 108);
+            button1.Name = "button1";
+            button1.Size = new Size(197, 63);
+            button1.TabIndex = 0;
+            button1.Text = "Kitaplar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(890, 471);
             Controls.Add(btnKaydet);
+            Controls.Add(button1);
             Controls.Add(btnKategoriler);
             Name = "Form1";
             Text = "Form1";
@@ -68,5 +80,6 @@
 
         private Button btnKategoriler;
         private Button btnKaydet;
+        private Button button1;
     }
 }

@@ -11,6 +11,8 @@ namespace KitapTakipUyg
 
             //daha önce kayýtlanmýþ verileri cache alýr
             Global.Ctx.Kategoriler.Load();
+            Global.Ctx.Kitaplar.Load();
+
         }
 
         private void btnKategoriler_Click(object sender, EventArgs e)
@@ -23,6 +25,12 @@ namespace KitapTakipUyg
         {
             Global.Ctx.SaveChanges();
             MessageBox.Show("Veriler kayýt edildi!");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmKitaplar form = new FrmKitaplar();
+            form.ShowDialog();
         }
     }
 }
