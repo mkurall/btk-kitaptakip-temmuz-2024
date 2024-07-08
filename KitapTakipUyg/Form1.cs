@@ -6,5 +6,11 @@ namespace KitapTakipUyg
         {
             InitializeComponent();
         }
+
+        private void btnKategoriler_Click(object sender, EventArgs e)
+        {
+            FrmKategoriler form = new FrmKategoriler();
+            form.ShowDialog();
+        }
     }
 }

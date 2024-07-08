@@ -39,6 +39,7 @@
             btnKategoriler.TabIndex = 0;
             btnKategoriler.Text = "Kategoriler";
             btnKategoriler.UseVisualStyleBackColor = true;
+            btnKategoriler.Click += btnKategoriler_Click;
             // 
             // Form1
             // 
