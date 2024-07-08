@@ -36,8 +36,8 @@
             label2 = new Label();
             txtKategoriAdi = new TextBox();
             panel3 = new Panel();
-            btnEkleGuncelle = new Button();
             button1 = new Button();
+            btnEkleGuncelle = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -106,6 +106,7 @@
             txtKategoriAdi.Name = "txtKategoriAdi";
             txtKategoriAdi.Size = new Size(254, 27);
             txtKategoriAdi.TabIndex = 4;
+            txtKategoriAdi.KeyDown += txtKategoriAdi_KeyDown;
             // 
             // panel3
             // 
@@ -119,15 +120,6 @@
             panel3.Size = new Size(357, 79);
             panel3.TabIndex = 5;
             // 
-            // btnEkleGuncelle
-            // 
-            btnEkleGuncelle.Location = new Point(271, 38);
-            btnEkleGuncelle.Name = "btnEkleGuncelle";
-            btnEkleGuncelle.Size = new Size(82, 29);
-            btnEkleGuncelle.TabIndex = 5;
-            btnEkleGuncelle.Text = "Ekle";
-            btnEkleGuncelle.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             button1.Location = new Point(271, 9);
@@ -136,6 +128,16 @@
             button1.TabIndex = 6;
             button1.Text = "Yeni";
             button1.UseVisualStyleBackColor = true;
+            // 
+            // btnEkleGuncelle
+            // 
+            btnEkleGuncelle.Location = new Point(271, 38);
+            btnEkleGuncelle.Name = "btnEkleGuncelle";
+            btnEkleGuncelle.Size = new Size(82, 29);
+            btnEkleGuncelle.TabIndex = 5;
+            btnEkleGuncelle.Text = "Ekle";
+            btnEkleGuncelle.UseVisualStyleBackColor = true;
+            btnEkleGuncelle.Click += btnEkleGuncelle_Click;
             // 
             // FrmKategoriler
             // 
@@ -148,6 +150,7 @@
             Controls.Add(panel1);
             Name = "FrmKategoriler";
             Text = "FrmKategoriler";
+            Load += FrmKategoriler_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

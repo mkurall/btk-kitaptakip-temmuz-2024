@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             btnKategoriler = new Button();
+            btnKaydet = new Button();
             SuspendLayout();
             // 
             // btnKategoriler
@@ -41,11 +42,22 @@
             btnKategoriler.UseVisualStyleBackColor = true;
             btnKategoriler.Click += btnKategoriler_Click;
             // 
+            // btnKaydet
+            // 
+            btnKaydet.Location = new Point(732, 25);
+            btnKaydet.Name = "btnKaydet";
+            btnKaydet.Size = new Size(123, 47);
+            btnKaydet.TabIndex = 1;
+            btnKaydet.Text = "Kaydet";
+            btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.Click += btnKaydet_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(890, 471);
+            Controls.Add(btnKaydet);
             Controls.Add(btnKategoriler);
             Name = "Form1";
             Text = "Form1";
@@ -55,5 +67,6 @@
         #endregion
 
         private Button btnKategoriler;
+        private Button btnKaydet;
     }
 }
