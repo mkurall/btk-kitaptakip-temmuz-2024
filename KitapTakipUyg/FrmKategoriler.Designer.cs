@@ -36,7 +36,7 @@
             label2 = new Label();
             txtKategoriAdi = new TextBox();
             panel3 = new Panel();
-            button1 = new Button();
+            btnYeni = new Button();
             btnEkleGuncelle = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -111,7 +111,7 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(button1);
+            panel3.Controls.Add(btnYeni);
             panel3.Controls.Add(btnEkleGuncelle);
             panel3.Controls.Add(txtKategoriAdi);
             panel3.Controls.Add(label2);
@@ -121,14 +121,15 @@
             panel3.Size = new Size(357, 79);
             panel3.TabIndex = 5;
             // 
-            // button1
+            // btnYeni
             // 
-            button1.Location = new Point(271, 9);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 29);
-            button1.TabIndex = 6;
-            button1.Text = "Yeni";
-            button1.UseVisualStyleBackColor = true;
+            btnYeni.Location = new Point(271, 9);
+            btnYeni.Name = "btnYeni";
+            btnYeni.Size = new Size(82, 29);
+            btnYeni.TabIndex = 6;
+            btnYeni.Text = "Yeni";
+            btnYeni.UseVisualStyleBackColor = true;
+            btnYeni.Click += btnYeni_Click;
             // 
             // btnEkleGuncelle
             // 
@@ -170,7 +171,7 @@
         private Label label2;
         private TextBox txtKategoriAdi;
         private Panel panel3;
-        private Button button1;
+        private Button btnYeni;
         private Button btnEkleGuncelle;
     }
 }

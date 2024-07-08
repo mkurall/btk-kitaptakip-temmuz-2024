@@ -36,6 +36,7 @@ namespace KitapTakipUyg
         private void btnEkleGuncelle_Click(object sender, EventArgs e)
         {
             Kategori kat = listBox1.SelectedItem as Kategori;
+
             if (kat == null)//seçili eleman yok ise (Ekle butonu)
             {
                 kat = new Kategori();
@@ -73,6 +74,12 @@ namespace KitapTakipUyg
                 btnEkleGuncelle.Text = "Ekle";
                 txtKategoriAdi.Text = "";
             }
+        }
+
+        private void btnYeni_Click(object sender, EventArgs e)
+        {
+            listBox1.SelectedItem = null;
+            txtKategoriAdi.Focus();//text boxa imleci konumlandırır
         }
     }
 }
