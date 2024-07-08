@@ -45,7 +45,7 @@ namespace KitapTakipUyg
 
                 Global.Ctx.Kategoriler.Add(kat);
 
-                listBox1.SelectedItem = null;//yeni eleman eklemek için
+                //listBox1.SelectedItem = null;//yeni eleman eklemek için
             }
             else
             {
@@ -96,6 +96,30 @@ namespace KitapTakipUyg
             DialogResult = DialogResult.OK;
 
             //Close();
+        }
+
+        private void listBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                listBox1.SelectedIndex = listBox1.IndexFromPoint(e.Location);
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Kategori kat = listBox1.SelectedItem as Kategori;
+
+            if(kat!=null)
+            {
+                DialogResult cevap =  MessageBox.Show($"{kat.Ad} adlı kategoriyi silmek istediği" +
+                    $"nize emin misiniz?", "Dikkat", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if(cevap == DialogResult.Yes)
+                {
+                    Global.Ctx.Kategoriler.Remove(kat);//local cache'den siler
+                    //Ne zaman: SaveChanges() --> DELETE FROM Kategoriler Where Id = ?
+                }
+            }
         }
     }
 }

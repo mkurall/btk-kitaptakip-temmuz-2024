@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             listBox1 = new ListBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            yeniToolStripMenuItem = new ToolStripMenuItem();
+            silToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
@@ -38,6 +42,7 @@
             panel3 = new Panel();
             btnYeni = new Button();
             btnEkleGuncelle = new Button();
+            contextMenuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -45,6 +50,7 @@
             // 
             // listBox1
             // 
+            listBox1.ContextMenuStrip = contextMenuStrip1;
             listBox1.Dock = DockStyle.Fill;
             listBox1.FormattingEnabled = true;
             listBox1.Location = new Point(0, 135);
@@ -52,6 +58,29 @@
             listBox1.Size = new Size(357, 294);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            listBox1.MouseDown += listBox1_MouseDown;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { yeniToolStripMenuItem, silToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(110, 56);
+            // 
+            // yeniToolStripMenuItem
+            // 
+            yeniToolStripMenuItem.Name = "yeniToolStripMenuItem";
+            yeniToolStripMenuItem.Size = new Size(109, 26);
+            yeniToolStripMenuItem.Text = "Yeni";
+            yeniToolStripMenuItem.Click += btnYeni_Click;
+            // 
+            // silToolStripMenuItem
+            // 
+            silToolStripMenuItem.Image = Properties.Resources.trash16;
+            silToolStripMenuItem.Name = "silToolStripMenuItem";
+            silToolStripMenuItem.Size = new Size(109, 26);
+            silToolStripMenuItem.Text = "Sil";
+            silToolStripMenuItem.Click += silToolStripMenuItem_Click;
             // 
             // panel1
             // 
@@ -158,6 +187,7 @@
             ShowInTaskbar = false;
             Text = "FrmKategoriler";
             Load += FrmKategoriler_Load;
+            contextMenuStrip1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -178,5 +208,8 @@
         private Panel panel3;
         private Button btnYeni;
         private Button btnEkleGuncelle;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem yeniToolStripMenuItem;
+        private ToolStripMenuItem silToolStripMenuItem;
     }
 }
