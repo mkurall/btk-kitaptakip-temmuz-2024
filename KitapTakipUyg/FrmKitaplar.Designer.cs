@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
@@ -37,6 +40,7 @@
             colKategori = new DataGridViewComboBoxColumn();
             colFiyat = new DataGridViewTextBoxColumn();
             colRafNo = new DataGridViewTextBoxColumn();
+            colSil = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -84,19 +88,22 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colAd, colKategori, colFiyat, colRafNo });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colAd, colKategori, colFiyat, colRafNo, colSil });
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 56);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(999, 387);
             dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.DataError += dataGridView1_DataError;
             // 
             // colAd
             // 
             colAd.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             colAd.DataPropertyName = "Ad";
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
+            colAd.DefaultCellStyle = dataGridViewCellStyle1;
             colAd.HeaderText = "Kitap Adı";
             colAd.MinimumWidth = 6;
             colAd.Name = "colAd";
@@ -112,6 +119,9 @@
             // colFiyat
             // 
             colFiyat.DataPropertyName = "Fiyat";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            colFiyat.DefaultCellStyle = dataGridViewCellStyle2;
             colFiyat.HeaderText = "Fiyat";
             colFiyat.MinimumWidth = 6;
             colFiyat.Name = "colFiyat";
@@ -124,6 +134,21 @@
             colRafNo.MinimumWidth = 6;
             colRafNo.Name = "colRafNo";
             colRafNo.Width = 125;
+            // 
+            // colSil
+            // 
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 0, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            colSil.DefaultCellStyle = dataGridViewCellStyle3;
+            colSil.HeaderText = "Sil";
+            colSil.MinimumWidth = 6;
+            colSil.Name = "colSil";
+            colSil.Text = "Sil";
+            colSil.UseColumnTextForButtonValue = true;
+            colSil.Width = 125;
             // 
             // FrmKitaplar
             // 
@@ -154,5 +179,6 @@
         private DataGridViewComboBoxColumn colKategori;
         private DataGridViewTextBoxColumn colFiyat;
         private DataGridViewTextBoxColumn colRafNo;
+        private DataGridViewButtonColumn colSil;
     }
 }
