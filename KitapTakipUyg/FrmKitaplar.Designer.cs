@@ -32,6 +32,8 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
             label1 = new Label();
             panel2 = new Panel();
             btnTamam = new Button();
@@ -49,12 +51,33 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 192, 192);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(999, 56);
             panel1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(594, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(113, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Kategori Filtresi";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(719, 12);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(258, 28);
+            comboBox1.TabIndex = 1;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -180,5 +203,7 @@
         private DataGridViewTextBoxColumn colFiyat;
         private DataGridViewTextBoxColumn colRafNo;
         private DataGridViewButtonColumn colSil;
+        private Label label2;
+        private ComboBox comboBox1;
     }
 }
