@@ -91,6 +91,7 @@
             btnTamam.TabIndex = 0;
             btnTamam.Text = "Tamam";
             btnTamam.UseVisualStyleBackColor = true;
+            btnTamam.Click += btnTamam_Click;
             // 
             // label2
             // 
@@ -150,7 +151,11 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmKategoriler";
+            ShowInTaskbar = false;
             Text = "FrmKategoriler";
             Load += FrmKategoriler_Load;
             panel1.ResumeLayout(false);

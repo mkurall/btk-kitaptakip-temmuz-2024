@@ -50,6 +50,14 @@ namespace KitapTakipUyg
             else
             {
                 kat.Ad = txtKategoriAdi.Text;
+
+                listBox1.DataSource = null;
+                var liste = Global.Ctx.Kategoriler.Local.ToBindingList();
+
+                listBox1.DataSource = liste;
+                listBox1.DisplayMember = "Ad";
+                listBox1.ValueMember = "Id";
+
             }
         }
 
@@ -80,6 +88,14 @@ namespace KitapTakipUyg
         {
             listBox1.SelectedItem = null;
             txtKategoriAdi.Focus();//text boxa imleci konumlandırır
+        }
+
+        private void btnTamam_Click(object sender, EventArgs e)
+        {
+            //Diyalog pencerelerinde geriye bişey döndüğünde form kapanır
+            DialogResult = DialogResult.OK;
+
+            //Close();
         }
     }
 }
