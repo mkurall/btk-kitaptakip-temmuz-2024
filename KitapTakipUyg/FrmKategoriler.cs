@@ -44,8 +44,23 @@ namespace KitapTakipUyg
 
         private void txtKategoriAdi_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
                 btnEkleGuncelle_Click(sender, EventArgs.Empty);
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //seçili eleman yok ise null gelir (as)
+            Kategori kat = listBox1.SelectedItem as Kategori;
+            if (kat != null)//var ise
+            {
+                txtKategoriAdi.Text = kat.Ad;
+                btnEkleGuncelle.Text = "Güncelle";
+            }
+            else
+            {
+                btnEkleGuncelle.Text = "Ekle";
+            }
         }
     }
 }
