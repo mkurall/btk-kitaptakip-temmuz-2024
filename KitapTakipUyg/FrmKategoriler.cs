@@ -35,11 +35,21 @@ namespace KitapTakipUyg
 
         private void btnEkleGuncelle_Click(object sender, EventArgs e)
         {
-            var kat = new Kategori();
-            //kat.Id = Otomatik Artan Sayı
-            kat.Ad = txtKategoriAdi.Text;
+            Kategori kat = listBox1.SelectedItem as Kategori;
+            if (kat == null)//seçili eleman yok ise (Ekle butonu)
+            {
+                kat = new Kategori();
+                //kat.Id = Otomatik Artan Sayı
+                kat.Ad = txtKategoriAdi.Text;
 
-            Global.Ctx.Kategoriler.Add(kat);
+                Global.Ctx.Kategoriler.Add(kat);
+
+                listBox1.SelectedItem = null;//yeni eleman eklemek için
+            }
+            else
+            {
+                kat.Ad = txtKategoriAdi.Text;
+            }
         }
 
         private void txtKategoriAdi_KeyDown(object sender, KeyEventArgs e)
@@ -52,6 +62,7 @@ namespace KitapTakipUyg
         {
             //seçili eleman yok ise null gelir (as)
             Kategori kat = listBox1.SelectedItem as Kategori;
+
             if (kat != null)//var ise
             {
                 txtKategoriAdi.Text = kat.Ad;
@@ -60,6 +71,7 @@ namespace KitapTakipUyg
             else
             {
                 btnEkleGuncelle.Text = "Ekle";
+                txtKategoriAdi.Text = "";
             }
         }
     }
