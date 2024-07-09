@@ -88,7 +88,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(585, 55);
+            panel1.Size = new Size(698, 55);
             panel1.TabIndex = 2;
             // 
             // panel2
@@ -100,13 +100,13 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 55);
             panel2.Name = "panel2";
-            panel2.Size = new Size(585, 49);
+            panel2.Size = new Size(698, 49);
             panel2.TabIndex = 3;
             // 
             // btnAra
             // 
             btnAra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAra.Location = new Point(534, 9);
+            btnAra.Location = new Point(647, 9);
             btnAra.Name = "btnAra";
             btnAra.Size = new Size(46, 29);
             btnAra.TabIndex = 2;
@@ -117,7 +117,7 @@
             // txtAranan
             // 
             txtAranan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtAranan.Location = new Point(260, 11);
+            txtAranan.Location = new Point(373, 11);
             txtAranan.Name = "txtAranan";
             txtAranan.Size = new Size(270, 27);
             txtAranan.TabIndex = 1;
@@ -126,7 +126,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(202, 14);
+            label1.Location = new Point(315, 14);
             label1.Name = "label1";
             label1.Size = new Size(56, 20);
             label1.TabIndex = 0;
@@ -150,7 +150,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(585, 238);
+            dataGridView1.Size = new Size(698, 296);
             dataGridView1.TabIndex = 4;
             // 
             // colAd
@@ -193,7 +193,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(585, 342);
+            ClientSize = new Size(698, 400);
             Controls.Add(dataGridView1);
             Controls.Add(panel2);
             Controls.Add(panel1);
