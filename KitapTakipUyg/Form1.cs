@@ -12,7 +12,7 @@ namespace KitapTakipUyg
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
         //-------------------------------
-        
+
 
         public Form1()
         {
@@ -59,6 +59,31 @@ namespace KitapTakipUyg
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = liste;
             dataGridView1.ReadOnly = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            Opacity = 0.85;
+
+            FrmGiris form = new FrmGiris();
+            var cevap = form.ShowDialog();//x butonuna basarsam geri ne döner?(DialogResult.Cancel)
+        
+            if(cevap == DialogResult.OK)//kullanýcý parolayý bildi!
+            {
+                //
+                Opacity = 1;
+            }
+            else//Kullanýcý x butonuna bastý
+            {
+                Application.Exit();
+            }
+        
+        
         }
     }
 }
