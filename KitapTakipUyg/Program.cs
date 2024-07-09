@@ -11,6 +11,11 @@ namespace KitapTakipUyg
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            //Yükleme ekraný
+            FrmYukleme form = new FrmYukleme();
+            form.ShowDialog();
+            ////////////////////////////
             Application.Run(new Form1());
         }
     }
