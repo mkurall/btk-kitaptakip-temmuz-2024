@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using KitapTakipUyg.Modeller;
+using KitapTakipUyg.Veritabani;
 
 namespace KitapTakipUyg
 {
@@ -15,6 +8,26 @@ namespace KitapTakipUyg
         public FrmGiris()
         {
             InitializeComponent();
+        }
+
+        private void btnOturumAc_Click(object sender, EventArgs e)
+        {
+            //Asıl amaç geriye "DialogResult.OK" dönmek
+
+            Kullanici kullanici = Global.Ctx.Kullanicilar
+                .FirstOrDefault(
+                k =>
+                k.KullaniciAdi.ToLower() == txtKullaniciAdi.Text.ToLower() &&
+                k.Parola == txtParola.Text);
+
+            if (kullanici != null)//kullnıcı bulundu
+            {
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                lblHata.Visible = true;
+            }
         }
     }
 }

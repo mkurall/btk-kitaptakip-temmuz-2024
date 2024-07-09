@@ -28,42 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
+            txtKullaniciAdi = new TextBox();
+            txtParola = new TextBox();
+            btnOturumAc = new Button();
             label1 = new Label();
             label2 = new Label();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             label3 = new Label();
-            label4 = new Label();
+            lblHata = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // txtKullaniciAdi
             // 
-            textBox1.Location = new Point(35, 118);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(309, 27);
-            textBox1.TabIndex = 0;
+            txtKullaniciAdi.Location = new Point(35, 118);
+            txtKullaniciAdi.Name = "txtKullaniciAdi";
+            txtKullaniciAdi.Size = new Size(309, 27);
+            txtKullaniciAdi.TabIndex = 0;
             // 
-            // textBox2
+            // txtParola
             // 
-            textBox2.Location = new Point(35, 171);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '●';
-            textBox2.Size = new Size(309, 27);
-            textBox2.TabIndex = 1;
+            txtParola.Location = new Point(35, 171);
+            txtParola.Name = "txtParola";
+            txtParola.PasswordChar = '●';
+            txtParola.Size = new Size(309, 27);
+            txtParola.TabIndex = 1;
             // 
-            // button1
+            // btnOturumAc
             // 
-            button1.Location = new Point(217, 236);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 48);
-            button1.TabIndex = 2;
-            button1.Text = "Oturum Aç";
-            button1.UseVisualStyleBackColor = true;
+            btnOturumAc.Location = new Point(217, 236);
+            btnOturumAc.Name = "btnOturumAc";
+            btnOturumAc.Size = new Size(127, 48);
+            btnOturumAc.TabIndex = 2;
+            btnOturumAc.Text = "Oturum Aç";
+            btnOturumAc.UseVisualStyleBackColor = true;
+            btnOturumAc.Click += btnOturumAc_Click;
             // 
             // label1
             // 
@@ -114,29 +115,29 @@
             label3.TabIndex = 0;
             label3.Text = "Hoşgeldiniz";
             // 
-            // label4
+            // lblHata
             // 
-            label4.AutoSize = true;
-            label4.ForeColor = Color.Red;
-            label4.Location = new Point(126, 201);
-            label4.Name = "label4";
-            label4.Size = new Size(218, 20);
-            label4.TabIndex = 4;
-            label4.Text = "Kullanıcı Adı yada Parola hatalı!";
-            label4.Visible = false;
+            lblHata.AutoSize = true;
+            lblHata.ForeColor = Color.Red;
+            lblHata.Location = new Point(126, 201);
+            lblHata.Name = "lblHata";
+            lblHata.Size = new Size(218, 20);
+            lblHata.TabIndex = 4;
+            lblHata.Text = "Kullanıcı Adı yada Parola hatalı!";
+            lblHata.Visible = false;
             // 
             // FrmGiris
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(375, 296);
-            Controls.Add(label4);
+            Controls.Add(lblHata);
             Controls.Add(panel1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnOturumAc);
+            Controls.Add(txtParola);
+            Controls.Add(txtKullaniciAdi);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -152,14 +153,14 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
+        private TextBox txtKullaniciAdi;
+        private TextBox txtParola;
+        private Button btnOturumAc;
         private Label label1;
         private Label label2;
         private Panel panel1;
         private Label label3;
         private PictureBox pictureBox1;
-        private Label label4;
+        private Label lblHata;
     }
 }
