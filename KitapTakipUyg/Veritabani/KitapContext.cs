@@ -16,7 +16,8 @@ namespace KitapTakipUyg.Veritabani
             //base.OnConfiguring(optionsBuilder);
             //string root = Application.StartupPath;
 
-            string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string appDataFolder = Environment.
+                GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\BtkAkademi";
 
             if(!Directory.Exists(appDataFolder))
                 Directory.CreateDirectory(appDataFolder);

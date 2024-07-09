@@ -6,6 +6,9 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Company>BtkAkademi</Company>
+    <Product>KitapUyg</Product>
+    <Copyright>Bu uygulama kopyalanamaz</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
