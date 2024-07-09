@@ -72,14 +72,14 @@ namespace KitapTakipUyg
 
             FrmGiris form = new FrmGiris();
             var cevap = form.ShowDialog();//x butonuna basarsam geri ne döner?(DialogResult.Cancel)
-        
-            if(cevap == DialogResult.OK)//kullanýcý parolayý bildi!
+
+            if (cevap == DialogResult.OK)//kullanýcý parolayý bildi!
             {
                 //
                 if (Global.OturumAcanKullanici.Ad == null)
                     btnKullanici.Text = Global.OturumAcanKullanici.KullaniciAdi;
-                else 
-                    btnKullanici.Text = 
+                else
+                    btnKullanici.Text =
                     Global.OturumAcanKullanici.Ad + " " +
                     Global.OturumAcanKullanici.Soyad;
 
@@ -90,8 +90,15 @@ namespace KitapTakipUyg
             {
                 Application.Exit();
             }
-        
-        
+
+
+        }
+
+        private void btnKullanici_Click(object sender, EventArgs e)
+        {
+            Point relPoint = new Point(btnKullanici.Left, btnKullanici.Bottom);
+            Point absPoint = panel1.PointToScreen(relPoint);
+            contextMenuStrip1.Show(absPoint);
         }
     }
 }

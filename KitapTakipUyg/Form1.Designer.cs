@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnKategoriler = new Button();
             btnKaydet = new Button();
@@ -43,9 +44,14 @@
             colKategori = new DataGridViewComboBoxColumn();
             colFiyat = new DataGridViewTextBoxColumn();
             colRafNo = new DataGridViewTextBoxColumn();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            bilgilerimiDüzenleToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripSeparator();
+            oturumuKapatToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // btnKategoriler
@@ -108,6 +114,7 @@
             btnKullanici.TabIndex = 3;
             btnKullanici.Text = "Ad Soyad";
             btnKullanici.UseVisualStyleBackColor = true;
+            btnKullanici.Click += btnKullanici_Click;
             // 
             // panel2
             // 
@@ -207,6 +214,30 @@
             colRafNo.ReadOnly = true;
             colRafNo.Width = 125;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { bilgilerimiDüzenleToolStripMenuItem, toolStripMenuItem1, oturumuKapatToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(205, 58);
+            // 
+            // bilgilerimiDüzenleToolStripMenuItem
+            // 
+            bilgilerimiDüzenleToolStripMenuItem.Name = "bilgilerimiDüzenleToolStripMenuItem";
+            bilgilerimiDüzenleToolStripMenuItem.Size = new Size(204, 24);
+            bilgilerimiDüzenleToolStripMenuItem.Text = "Bilgilerimi Düzenle";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(201, 6);
+            // 
+            // oturumuKapatToolStripMenuItem
+            // 
+            oturumuKapatToolStripMenuItem.Name = "oturumuKapatToolStripMenuItem";
+            oturumuKapatToolStripMenuItem.Size = new Size(204, 24);
+            oturumuKapatToolStripMenuItem.Text = "Oturumu Kapat";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -224,6 +255,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -243,5 +275,9 @@
         private DataGridViewTextBoxColumn colFiyat;
         private DataGridViewTextBoxColumn colRafNo;
         private Button btnKullanici;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem bilgilerimiDüzenleToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem1;
+        private ToolStripMenuItem oturumuKapatToolStripMenuItem;
     }
 }
