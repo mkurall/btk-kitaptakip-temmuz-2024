@@ -30,8 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
+            panel2 = new Panel();
+            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             progressBar1 = new ProgressBar();
@@ -43,27 +44,18 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(653, 164);
             panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
-            label1.ForeColor = Color.SteelBlue;
-            label1.Location = new Point(162, 63);
-            label1.Name = "label1";
-            label1.Size = new Size(421, 89);
-            label1.TabIndex = 1;
-            label1.Text = "BtkAkademi";
-            // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.books;
             pictureBox1.Location = new Point(3, 2);
             pictureBox1.Name = "pictureBox1";
@@ -71,7 +63,25 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.DeepPink;
+            panel2.Location = new Point(-17, -5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(679, 70);
+            panel2.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 40F, FontStyle.Bold);
+            label1.ForeColor = Color.SteelBlue;
+            label1.Location = new Point(0, 68);
+            label1.Name = "label1";
+            label1.Size = new Size(653, 89);
+            label1.TabIndex = 1;
+            label1.Text = "    BtkAkademi";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -133,9 +143,9 @@
             Name = "FrmYukleme";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmYukleme";
+            TransparencyKey = Color.DeepPink;
             Shown += FrmYukleme_Shown;
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -151,5 +161,6 @@
         private ProgressBar progressBar1;
         private Label lblBilgi;
         private System.Windows.Forms.Timer timer1;
+        private Panel panel2;
     }
 }

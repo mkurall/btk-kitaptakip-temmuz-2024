@@ -14,8 +14,15 @@ namespace KitapTakipUyg.Veritabani
             //sen burayı override ediyorsun ama
             //temeldeki metodun gövdesini de çalıştır
             //base.OnConfiguring(optionsBuilder);
-            string root = Application.StartupPath;
-            optionsBuilder.UseSqlite($"Data Source ={root}\\kitaplar.db;");
+            //string root = Application.StartupPath;
+
+            string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+            if(!Directory.Exists(appDataFolder))
+                Directory.CreateDirectory(appDataFolder);
+
+
+            optionsBuilder.UseSqlite($"Data Source ={appDataFolder}\\kitaplar.db;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

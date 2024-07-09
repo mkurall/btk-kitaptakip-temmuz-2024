@@ -26,7 +26,11 @@ namespace KitapTakipUyg
             if (sure == 1)
                 lblBilgi.Text = "Uygulama başlatılıyor...";
             else if (sure == 2)
+            {
                 lblBilgi.Text = "Veritabanı kontrol ediliyor...";
+                //veritabanı yok ise oluştur
+
+            }
             else if (sure == 3)
                 lblBilgi.Text = "Ayarlar okunuyor...";
             else
