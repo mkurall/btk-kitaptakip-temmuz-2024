@@ -143,6 +143,7 @@
             MinimizeBox = false;
             Name = "FrmGiris";
             ShowInTaskbar = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Oturum Aç";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -33,6 +33,7 @@
             btnKaydet = new Button();
             button1 = new Button();
             panel1 = new Panel();
+            btnKullanici = new Button();
             panel2 = new Panel();
             btnAra = new Button();
             txtAranan = new TextBox();
@@ -82,6 +83,7 @@
             // panel1
             // 
             panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(btnKullanici);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnKaydet);
             panel1.Controls.Add(btnKategoriler);
@@ -90,6 +92,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(698, 55);
             panel1.TabIndex = 2;
+            // 
+            // btnKullanici
+            // 
+            btnKullanici.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnKullanici.FlatAppearance.BorderSize = 0;
+            btnKullanici.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 192, 0);
+            btnKullanici.FlatAppearance.MouseOverBackColor = Color.LightGreen;
+            btnKullanici.FlatStyle = FlatStyle.Flat;
+            btnKullanici.Image = Properties.Resources.profile_user;
+            btnKullanici.ImageAlign = ContentAlignment.MiddleLeft;
+            btnKullanici.Location = new Point(525, 12);
+            btnKullanici.Name = "btnKullanici";
+            btnKullanici.Size = new Size(161, 30);
+            btnKullanici.TabIndex = 3;
+            btnKullanici.Text = "Ad Soyad";
+            btnKullanici.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -199,6 +217,7 @@
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             Shown += Form1_Shown;
             panel1.ResumeLayout(false);
@@ -223,5 +242,6 @@
         private DataGridViewComboBoxColumn colKategori;
         private DataGridViewTextBoxColumn colFiyat;
         private DataGridViewTextBoxColumn colRafNo;
+        private Button btnKullanici;
     }
 }

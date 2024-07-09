@@ -76,6 +76,14 @@ namespace KitapTakipUyg
             if(cevap == DialogResult.OK)//kullanýcý parolayý bildi!
             {
                 //
+                if (Global.OturumAcanKullanici.Ad == null)
+                    btnKullanici.Text = Global.OturumAcanKullanici.KullaniciAdi;
+                else 
+                    btnKullanici.Text = 
+                    Global.OturumAcanKullanici.Ad + " " +
+                    Global.OturumAcanKullanici.Soyad;
+
+
                 Opacity = 1;
             }
             else//Kullanýcý x butonuna bastý

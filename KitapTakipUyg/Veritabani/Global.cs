@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KitapTakipUyg.Modeller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +10,6 @@ namespace KitapTakipUyg.Veritabani
     public static class Global
     {
         public static KitapContext Ctx = new KitapContext();
+        public static Kullanici OturumAcanKullanici = null;
     }
 }

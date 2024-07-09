@@ -22,6 +22,8 @@ namespace KitapTakipUyg
 
             if (kullanici != null)//kullnıcı bulundu
             {
+                //Daha sonra bu kullanıcıyı kullanmak için sakla
+                Global.OturumAcanKullanici = kullanici;
                 DialogResult = DialogResult.OK;
             }
             else
