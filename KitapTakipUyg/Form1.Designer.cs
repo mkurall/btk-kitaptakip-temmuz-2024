@@ -35,6 +35,7 @@
             button1 = new Button();
             panel1 = new Panel();
             btnKullanici = new Button();
+            btnKullanicilar = new Button();
             panel2 = new Panel();
             btnAra = new Button();
             txtAranan = new TextBox();
@@ -68,7 +69,7 @@
             // 
             btnKaydet.Image = Properties.Resources.floppy_disk__1_;
             btnKaydet.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKaydet.Location = new Point(250, 12);
+            btnKaydet.Location = new Point(434, 12);
             btnKaydet.Name = "btnKaydet";
             btnKaydet.Size = new Size(125, 35);
             btnKaydet.TabIndex = 1;
@@ -92,11 +93,12 @@
             panel1.Controls.Add(btnKullanici);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnKaydet);
+            panel1.Controls.Add(btnKullanicilar);
             panel1.Controls.Add(btnKategoriler);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(698, 55);
+            panel1.Size = new Size(931, 55);
             panel1.TabIndex = 2;
             // 
             // btnKullanici
@@ -108,13 +110,24 @@
             btnKullanici.FlatStyle = FlatStyle.Flat;
             btnKullanici.Image = Properties.Resources.profile_user;
             btnKullanici.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKullanici.Location = new Point(525, 12);
+            btnKullanici.Location = new Point(758, 12);
             btnKullanici.Name = "btnKullanici";
             btnKullanici.Size = new Size(161, 30);
             btnKullanici.TabIndex = 3;
             btnKullanici.Text = "Ad Soyad";
             btnKullanici.UseVisualStyleBackColor = true;
             btnKullanici.Click += btnKullanici_Click;
+            // 
+            // btnKullanicilar
+            // 
+            btnKullanicilar.Location = new Point(242, 13);
+            btnKullanicilar.Name = "btnKullanicilar";
+            btnKullanicilar.Size = new Size(151, 34);
+            btnKullanicilar.TabIndex = 0;
+            btnKullanicilar.Text = "Kullanıcı Tanımları";
+            btnKullanicilar.UseVisualStyleBackColor = true;
+            btnKullanicilar.Visible = false;
+            btnKullanicilar.Click += btnKullanicilar_Click;
             // 
             // panel2
             // 
@@ -125,13 +138,13 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 55);
             panel2.Name = "panel2";
-            panel2.Size = new Size(698, 49);
+            panel2.Size = new Size(931, 49);
             panel2.TabIndex = 3;
             // 
             // btnAra
             // 
             btnAra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAra.Location = new Point(647, 9);
+            btnAra.Location = new Point(880, 9);
             btnAra.Name = "btnAra";
             btnAra.Size = new Size(46, 29);
             btnAra.TabIndex = 2;
@@ -142,7 +155,7 @@
             // txtAranan
             // 
             txtAranan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtAranan.Location = new Point(373, 11);
+            txtAranan.Location = new Point(606, 11);
             txtAranan.Name = "txtAranan";
             txtAranan.Size = new Size(270, 27);
             txtAranan.TabIndex = 1;
@@ -151,7 +164,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(315, 14);
+            label1.Location = new Point(548, 14);
             label1.Name = "label1";
             label1.Size = new Size(56, 20);
             label1.TabIndex = 0;
@@ -175,7 +188,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(698, 296);
+            dataGridView1.Size = new Size(931, 296);
             dataGridView1.TabIndex = 4;
             // 
             // colAd
@@ -219,23 +232,23 @@
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { bilgilerimiDüzenleToolStripMenuItem, toolStripMenuItem1, oturumuKapatToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(211, 86);
+            contextMenuStrip1.Size = new Size(205, 58);
             // 
             // bilgilerimiDüzenleToolStripMenuItem
             // 
             bilgilerimiDüzenleToolStripMenuItem.Name = "bilgilerimiDüzenleToolStripMenuItem";
-            bilgilerimiDüzenleToolStripMenuItem.Size = new Size(210, 24);
+            bilgilerimiDüzenleToolStripMenuItem.Size = new Size(204, 24);
             bilgilerimiDüzenleToolStripMenuItem.Text = "Bilgilerimi Düzenle";
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(207, 6);
+            toolStripMenuItem1.Size = new Size(201, 6);
             // 
             // oturumuKapatToolStripMenuItem
             // 
             oturumuKapatToolStripMenuItem.Name = "oturumuKapatToolStripMenuItem";
-            oturumuKapatToolStripMenuItem.Size = new Size(210, 24);
+            oturumuKapatToolStripMenuItem.Size = new Size(204, 24);
             oturumuKapatToolStripMenuItem.Text = "Oturumu Kapat";
             oturumuKapatToolStripMenuItem.Click += oturumuKapatToolStripMenuItem_Click;
             // 
@@ -243,7 +256,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(698, 400);
+            ClientSize = new Size(931, 400);
             Controls.Add(dataGridView1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -280,5 +293,6 @@
         private ToolStripMenuItem bilgilerimiDüzenleToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem oturumuKapatToolStripMenuItem;
+        private Button btnKullanicilar;
     }
 }

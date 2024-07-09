@@ -1,3 +1,4 @@
+using KitapTakipUyg.Modeller;
 using KitapTakipUyg.Veritabani;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.InteropServices;
@@ -84,6 +85,12 @@ namespace KitapTakipUyg
                     Global.OturumAcanKullanici.Soyad;
 
 
+                if(Global.OturumAcanKullanici.Yetki == YetkiTurleri.Yonetici)
+                    btnKullanicilar.Visible = true;
+                else
+                    btnKullanicilar.Visible = false;
+
+
                 Opacity = 1;
             }
             else//Kullanýcý x butonuna bastý
@@ -106,10 +113,16 @@ namespace KitapTakipUyg
             Global.OturumAcanKullanici = null;
 
             btnKullanici.Text = "";
-            
+
             dataGridView1.DataSource = null;
 
             Form1_Shown(sender, EventArgs.Empty);
+        }
+
+        private void btnKullanicilar_Click(object sender, EventArgs e)
+        {
+            FrmKullanicilar form = new FrmKullanicilar();
+            form.ShowDialog();
         }
     }
 }
