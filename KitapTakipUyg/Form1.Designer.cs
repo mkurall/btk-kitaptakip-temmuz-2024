@@ -31,13 +31,22 @@
             btnKategoriler = new Button();
             btnKaydet = new Button();
             button1 = new Button();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            label1 = new Label();
+            txtAranan = new TextBox();
+            btnAra = new Button();
+            dataGridView1 = new DataGridView();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnKategoriler
             // 
-            btnKategoriler.Location = new Point(33, 39);
+            btnKategoriler.Location = new Point(127, 13);
             btnKategoriler.Name = "btnKategoriler";
-            btnKategoriler.Size = new Size(197, 63);
+            btnKategoriler.Size = new Size(98, 34);
             btnKategoriler.TabIndex = 0;
             btnKategoriler.Text = "Kategoriler";
             btnKategoriler.UseVisualStyleBackColor = true;
@@ -45,9 +54,11 @@
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(732, 25);
+            btnKaydet.Image = Properties.Resources.floppy_disk__1_;
+            btnKaydet.ImageAlign = ContentAlignment.MiddleLeft;
+            btnKaydet.Location = new Point(250, 12);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(123, 47);
+            btnKaydet.Size = new Size(125, 35);
             btnKaydet.TabIndex = 1;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
@@ -55,24 +66,90 @@
             // 
             // button1
             // 
-            button1.Location = new Point(33, 108);
+            button1.Location = new Point(17, 13);
             button1.Name = "button1";
-            button1.Size = new Size(197, 63);
+            button1.Size = new Size(92, 34);
             button1.TabIndex = 0;
             button1.Text = "Kitaplar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnKaydet);
+            panel1.Controls.Add(btnKategoriler);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(585, 55);
+            panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Beige;
+            panel2.Controls.Add(btnAra);
+            panel2.Controls.Add(txtAranan);
+            panel2.Controls.Add(label1);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 55);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(585, 49);
+            panel2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Location = new Point(202, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Aranan";
+            // 
+            // txtAranan
+            // 
+            txtAranan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtAranan.Location = new Point(260, 11);
+            txtAranan.Name = "txtAranan";
+            txtAranan.Size = new Size(270, 27);
+            txtAranan.TabIndex = 1;
+            // 
+            // btnAra
+            // 
+            btnAra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAra.Location = new Point(534, 9);
+            btnAra.Name = "btnAra";
+            btnAra.Size = new Size(46, 29);
+            btnAra.TabIndex = 2;
+            btnAra.Text = "Ara";
+            btnAra.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 104);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(585, 238);
+            dataGridView1.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(890, 471);
-            Controls.Add(btnKaydet);
-            Controls.Add(button1);
-            Controls.Add(btnKategoriler);
+            ClientSize = new Size(585, 342);
+            Controls.Add(dataGridView1);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -81,5 +158,11 @@
         private Button btnKategoriler;
         private Button btnKaydet;
         private Button button1;
+        private Panel panel1;
+        private Panel panel2;
+        private Button btnAra;
+        private TextBox txtAranan;
+        private Label label1;
+        private DataGridView dataGridView1;
     }
 }

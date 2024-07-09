@@ -27,7 +27,7 @@ namespace KitapTakipUyg
             //Yeni eklenen veriler veya değişiklikler bu cache üzerinde saklanır 
             //Kaydet dediğinizde veriler cache üzerinden Veritabanına gönderilir
             var liste = Global.Ctx.Kategoriler.Local.ToBindingList();
-
+            //                     Veritabanı  cache  SaveChanges
             listBox1.DataSource = liste;
             listBox1.DisplayMember = "Ad";
             listBox1.ValueMember = "Id";
@@ -71,13 +71,14 @@ namespace KitapTakipUyg
         {
             //seçili eleman yok ise null gelir (as)
             Kategori kat = listBox1.SelectedItem as Kategori;
+            
 
             if (kat != null)//var ise
             {
                 txtKategoriAdi.Text = kat.Ad;
                 btnEkleGuncelle.Text = "Güncelle";
             }
-            else
+            else//veri yok ise
             {
                 btnEkleGuncelle.Text = "Ekle";
                 txtKategoriAdi.Text = "";

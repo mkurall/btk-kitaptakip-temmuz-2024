@@ -25,9 +25,6 @@ namespace KitapTakipUyg
             comboBox1.ValueMember = "Id";
 
 
-
-
-
             dataGridView1.AutoGenerateColumns = false;//sadece benim eklediğim sütunlar görünsün
             var list = Global.Ctx.Kitaplar.Local.ToBindingList();
 
@@ -74,6 +71,7 @@ namespace KitapTakipUyg
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Kategori seciliKat = comboBox1.SelectedItem as Kategori;
+
             if (seciliKat != null) 
             {
                 dataGridView1.AutoGenerateColumns = false;//sadece benim eklediğim sütunlar görünsün
