@@ -48,10 +48,17 @@ namespace KitapTakipUyg
         {
             //Where metodu belistilen þarta uyan kayýtlarý getirir
             var liste = Global.Ctx.Kitaplar.Local
-                .Where(k => k.Ad.ToLower() == txtAranan.Text.ToLower())
+                .Where(k => k.Ad.ToLower().Contains(txtAranan.Text.ToLower()))
                 .ToList();
+            //Contains
 
+            colKategori.DataSource = Global.Ctx.Kategoriler.Local.ToList();
+            colKategori.DisplayMember = "Ad";//Kategori.Ad
+            colKategori.ValueMember = "Id";//Kategori.Id
+
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = liste;
+            dataGridView1.ReadOnly = true;
         }
     }
 }

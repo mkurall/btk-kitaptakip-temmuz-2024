@@ -38,6 +38,10 @@
             txtAranan = new TextBox();
             label1 = new Label();
             dataGridView1 = new DataGridView();
+            colAd = new DataGridViewTextBoxColumn();
+            colKategori = new DataGridViewComboBoxColumn();
+            colFiyat = new DataGridViewTextBoxColumn();
+            colRafNo = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -132,6 +136,7 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colAd, colKategori, colFiyat, colRafNo });
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Window;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
@@ -143,9 +148,46 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 104);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(585, 238);
             dataGridView1.TabIndex = 4;
+            // 
+            // colAd
+            // 
+            colAd.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colAd.DataPropertyName = "Ad";
+            colAd.HeaderText = "Kitap Adı";
+            colAd.MinimumWidth = 6;
+            colAd.Name = "colAd";
+            colAd.ReadOnly = true;
+            // 
+            // colKategori
+            // 
+            colKategori.DataPropertyName = "KategoriId";
+            colKategori.HeaderText = "Kategori";
+            colKategori.MinimumWidth = 6;
+            colKategori.Name = "colKategori";
+            colKategori.ReadOnly = true;
+            colKategori.Width = 200;
+            // 
+            // colFiyat
+            // 
+            colFiyat.DataPropertyName = "Fiyat";
+            colFiyat.HeaderText = "Fiyat";
+            colFiyat.MinimumWidth = 6;
+            colFiyat.Name = "colFiyat";
+            colFiyat.ReadOnly = true;
+            colFiyat.Width = 125;
+            // 
+            // colRafNo
+            // 
+            colRafNo.DataPropertyName = "RafNo";
+            colRafNo.HeaderText = "Raf Numarası";
+            colRafNo.MinimumWidth = 6;
+            colRafNo.Name = "colRafNo";
+            colRafNo.ReadOnly = true;
+            colRafNo.Width = 125;
             // 
             // Form1
             // 
@@ -175,5 +217,9 @@
         private TextBox txtAranan;
         private Label label1;
         private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn colAd;
+        private DataGridViewComboBoxColumn colKategori;
+        private DataGridViewTextBoxColumn colFiyat;
+        private DataGridViewTextBoxColumn colRafNo;
     }
 }
