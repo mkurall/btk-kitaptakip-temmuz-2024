@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnKategoriler = new Button();
             btnKaydet = new Button();
             button1 = new Button();
             panel1 = new Panel();
             panel2 = new Panel();
-            label1 = new Label();
-            txtAranan = new TextBox();
             btnAra = new Button();
+            txtAranan = new TextBox();
+            label1 = new Label();
             dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -98,6 +99,25 @@
             panel2.Size = new Size(585, 49);
             panel2.TabIndex = 3;
             // 
+            // btnAra
+            // 
+            btnAra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAra.Location = new Point(534, 9);
+            btnAra.Name = "btnAra";
+            btnAra.Size = new Size(46, 29);
+            btnAra.TabIndex = 2;
+            btnAra.Text = "Ara";
+            btnAra.UseVisualStyleBackColor = true;
+            btnAra.Click += btnAra_Click;
+            // 
+            // txtAranan
+            // 
+            txtAranan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtAranan.Location = new Point(260, 11);
+            txtAranan.Name = "txtAranan";
+            txtAranan.Size = new Size(270, 27);
+            txtAranan.TabIndex = 1;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -108,27 +128,18 @@
             label1.TabIndex = 0;
             label1.Text = "Aranan";
             // 
-            // txtAranan
-            // 
-            txtAranan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtAranan.Location = new Point(260, 11);
-            txtAranan.Name = "txtAranan";
-            txtAranan.Size = new Size(270, 27);
-            txtAranan.TabIndex = 1;
-            // 
-            // btnAra
-            // 
-            btnAra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAra.Location = new Point(534, 9);
-            btnAra.Name = "btnAra";
-            btnAra.Size = new Size(46, 29);
-            btnAra.TabIndex = 2;
-            btnAra.Text = "Ara";
-            btnAra.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.IndianRed;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Fuchsia;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 104);
             dataGridView1.Name = "dataGridView1";
