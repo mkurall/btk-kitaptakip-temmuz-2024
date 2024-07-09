@@ -100,5 +100,16 @@ namespace KitapTakipUyg
             Point absPoint = panel1.PointToScreen(relPoint);
             contextMenuStrip1.Show(absPoint);
         }
+
+        private void oturumuKapatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Global.OturumAcanKullanici = null;
+
+            btnKullanici.Text = "";
+            
+            dataGridView1.DataSource = null;
+
+            Form1_Shown(sender, EventArgs.Empty);
+        }
     }
 }

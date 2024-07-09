@@ -219,24 +219,25 @@
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { bilgilerimiDüzenleToolStripMenuItem, toolStripMenuItem1, oturumuKapatToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(205, 58);
+            contextMenuStrip1.Size = new Size(211, 86);
             // 
             // bilgilerimiDüzenleToolStripMenuItem
             // 
             bilgilerimiDüzenleToolStripMenuItem.Name = "bilgilerimiDüzenleToolStripMenuItem";
-            bilgilerimiDüzenleToolStripMenuItem.Size = new Size(204, 24);
+            bilgilerimiDüzenleToolStripMenuItem.Size = new Size(210, 24);
             bilgilerimiDüzenleToolStripMenuItem.Text = "Bilgilerimi Düzenle";
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(201, 6);
+            toolStripMenuItem1.Size = new Size(207, 6);
             // 
             // oturumuKapatToolStripMenuItem
             // 
             oturumuKapatToolStripMenuItem.Name = "oturumuKapatToolStripMenuItem";
-            oturumuKapatToolStripMenuItem.Size = new Size(204, 24);
+            oturumuKapatToolStripMenuItem.Size = new Size(210, 24);
             oturumuKapatToolStripMenuItem.Text = "Oturumu Kapat";
+            oturumuKapatToolStripMenuItem.Click += oturumuKapatToolStripMenuItem_Click;
             // 
             // Form1
             // 
