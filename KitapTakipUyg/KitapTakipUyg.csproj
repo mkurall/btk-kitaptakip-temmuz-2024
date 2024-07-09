@@ -9,7 +9,15 @@
     <Company>BtkAkademi</Company>
     <Product>KitapUyg</Product>
     <Copyright>Bu uygulama kopyalanamaz</Copyright>
+    <PackageIcon>Google-Noto-Emoji-Objects-62863-books.128.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\Google-Noto-Emoji-Objects-62863-books.128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />

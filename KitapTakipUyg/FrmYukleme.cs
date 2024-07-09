@@ -32,8 +32,6 @@ namespace KitapTakipUyg
                 lblBilgi.Text = "Veritabanı kontrol ediliyor...";
                 //veritabanı yok ise oluştur
                 Global.Ctx.Database.EnsureCreated();
-                //Global.Ctx.Database.Migrate();
-
             }
             else if (sure == 3)
                 lblBilgi.Text = "Ayarlar okunuyor...";

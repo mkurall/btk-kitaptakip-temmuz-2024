@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnKategoriler = new Button();
             btnKaydet = new Button();
             button1 = new Button();
@@ -260,8 +261,9 @@
             Controls.Add(dataGridView1);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "BtkAkademi - Kitap Takip Uygulaması";
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             Shown += Form1_Shown;
